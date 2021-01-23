@@ -15,4 +15,7 @@ def flickr_api_response(tagstring):
     dictionary_parameters["media"] = "photos"
     dictionary_parameters["format"] = "json"
     dictionary_parameters["nojscallback"] = 1
+    flickr_result = requests.get(baseurl, params=dictionary_parameters)
+    return flickr_result.json()
+
 
