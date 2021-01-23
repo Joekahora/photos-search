@@ -24,3 +24,4 @@ for photo in photos_result:
     owner = photo["owner"]
     photo_id = photo["id"]
     url = "https://www.flickr.com/photos/{}/{}".format(owner,photo_id)
+    webbrowser.get(url)
