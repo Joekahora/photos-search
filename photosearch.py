@@ -10,4 +10,5 @@ def flickr_api_response(tagstring):
     dictionary_parameters["apikey"] = flickrApiKey
     dictionary_parameters["tags"] = tagstring
     dictionary_parameters["tagmode"] = "all"
+    dictionary_parameters["method"] = "flickr.photos.search"
 
