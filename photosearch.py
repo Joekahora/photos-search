@@ -7,21 +7,24 @@ flickrApiKey = ""
 def flickr_api_response(tagstring):
     baseurl = "https://api.flickr.com/services/rest/"
     dictionary_parameters = {}
-    dictionary_parameters["apikey"] = flickrApiKey
+    dictionary_parameters["api_key"] = flickrApiKey
     dictionary_parameters["tags"] = tagstring
-    dictionary_parameters["tagmode"] = "all"
+    dictionary_parameters["tag_model"] = "all"
     dictionary_parameters["method"] = "flickr.photos.search"
     dictionary_parameters["per_page"] = 5
     dictionary_parameters["media"] = "photos"
     dictionary_parameters["format"] = "json"
-    dictionary_parameters["nojscallback"] = 1
-    flickr_result = requests.get(baseurl, params=dictionary_parameters)
+    dictionary_parameters["nojsoncallback"] = 1
+    flickr_result = requests.get(baseurl, params = dictionary_parameters)
+    print(flickr_result)
     return flickr_result.json()
-results = flickr_api_response(input())
 
+results = flickr_api_response(input())
+print(results)
 photos_result = results["photos"]["photo"]
+print(photos_result)
 for photo in photos_result:
     owner = photo["owner"]
     photo_id = photo["id"]
     url = "https://www.flickr.com/photos/{}/{}".format(owner,photo_id)
-    webbrowser.get(url)
+    webbrowser.open(url)
