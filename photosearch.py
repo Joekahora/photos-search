@@ -14,4 +14,5 @@ def flickr_api_response(tagstring):
     dictionary_parameters["per_page"] = 5
     dictionary_parameters["media"] = "photos"
     dictionary_parameters["format"] = "json"
+    dictionary_parameters["nojscallback"] = 1
 
