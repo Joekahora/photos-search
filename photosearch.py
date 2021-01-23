@@ -9,4 +9,5 @@ def flickr_api_response(tagstring):
     dictionary_parameters = {}
     dictionary_parameters["apikey"] = flickrApiKey
     dictionary_parameters["tags"] = tagstring
-    
+    dictionary_parameters["tagmode"] = "all"
+
