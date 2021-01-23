@@ -19,3 +19,8 @@ def flickr_api_response(tagstring):
     return flickr_result.json()
 results = flickr_api_response(input())
 
+photos_result = results["photos"]["photo"]
+for photo in photos_result:
+    owner = photo["owner"]
+    photo_id = photo["id"]
+    url = "https://www.flickr.com/photos/{}/{}".format(owner,photo_id)
