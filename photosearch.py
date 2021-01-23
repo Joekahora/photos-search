@@ -16,13 +16,11 @@ def flickr_api_response(tagstring):
     dictionary_parameters["format"] = "json"
     dictionary_parameters["nojsoncallback"] = 1
     flickr_result = requests.get(baseurl, params = dictionary_parameters)
-    print(flickr_result)
     return flickr_result.json()
 
 results = flickr_api_response(input())
-print(results)
 photos_result = results["photos"]["photo"]
-print(photos_result)
+
 for photo in photos_result:
     owner = photo["owner"]
     photo_id = photo["id"]
