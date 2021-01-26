@@ -25,7 +25,7 @@ Flickr API and Python 3.9.
 ***Steps To Follow***
 
 - Create your Flickr account so that you can get your API key.
-- Navigate to [Flickr Api] (<https://www.flickr.com/services/apps/create/apply/>?) and select for "non commericial"  and create it.  
+- Navigate to [Flickr Api] (<https://www.flickr.com/services/apps/create/apply/>) and select for "non commericial"  and create it.  
 - Clone this Repository in your terminal `git clone https://github.com/Joekahora/photos-search.git`.
 - cd into the folder and open VS Code `code .`
 - Enter the Key you got from Flickr into the apikey variable. Ignore the "SECRET".
@@ -40,4 +40,4 @@ Flickr API and Python 3.9.
 
 ## CREDITS
 
-- Credits goes to University of Michigan Online Course  ***Data Collection and Processing with Python***
+- Credits goes to University of Michigan Online Course  on ***Data Collection and Processing with Python***
